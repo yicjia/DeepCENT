@@ -18,6 +18,8 @@ Download a local copy of DeepQuantreg and install from the directory:
 
 torch, lifelines, sklearn and all of their respective dependencies. 
 
+
+
 ## Example
 
 ### Using Google Colab
