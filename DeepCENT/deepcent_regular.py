@@ -70,7 +70,7 @@ def mse_loss(pred,  obs, delta):
     p = ind * delta0 * (obs - pred)**2 
     return mse.mean(), p.mean()
 
-def DeepCENT(train_dataset, test_dataset, num_feature, num_layers, node, dropout, lr, lambda1, lambda2, num_epoch, batch_size, seed=123, T=100):
+def DeepCENT(train_dataset, test_dataset, num_feature, num_layers, node, dropout, lr, lambda1, lambda2, num_epoch, batch_size, device, seed=123, T=100):
     torch.manual_seed(seed)
 
     train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
