@@ -15,6 +15,12 @@ import csv
 import os
 import time
 
+if torch.cuda.is_available():  
+  dev = "cuda:0" 
+else:  
+  dev = "cpu"  
+device = torch.device(dev) 
+
 
 class Net_regular(nn.Module):
     def __init__(self, n_feature, num_layers, node, dropout, drop_factor = 1):
@@ -70,7 +76,7 @@ def mse_loss(pred,  obs, delta):
     p = ind * delta0 * (obs - pred)**2 
     return mse.mean(), p.mean()
 
-def DeepCENT(train_dataset, test_dataset, num_feature, num_layers, node, dropout, lr, lambda1, lambda2, num_epoch, batch_size, device, seed=123, T=100):
+def DeepCENT(train_dataset, test_dataset, num_feature, num_layers, node, dropout, lr, lambda1, lambda2, num_epoch, batch_size, seed=123, T=100):
     torch.manual_seed(seed)
 
     train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
