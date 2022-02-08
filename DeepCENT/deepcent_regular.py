@@ -18,10 +18,6 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import torch.distributions as dist
 
-from sklearn.preprocessing import MinMaxScaler    
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, accuracy_score
-
 import math
 import csv
 import os
