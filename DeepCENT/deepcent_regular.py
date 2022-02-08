@@ -26,7 +26,7 @@ import time
 
 class Net_regular(nn.Module):
     def __init__(self, n_feature, num_layers, node, dropout, drop_factor = 1):
-        super(Net, self).__init__()
+        super(Net_regular, self).__init__()
         # input layer
         layers = [nn.Linear(n_feature, node),
                   nn.BatchNorm1d(node),
