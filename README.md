@@ -28,3 +28,15 @@ Here is a tutorial on Google Colab
 	</a>
   
 - Competing risks data: 
+
+## Reference
+
+### If you use DeepCENT in your research, please consider citing:=
+Jia, Y., &  Jeong, J. H. (2022). DeepCENT: Prediction of Censored Event Time via Deep Learning. *arXiv preprint arXiv:2202.05155*.
+```
+@article{jia2022deepcent,
+  title={Deep{CENT}: Prediction of Censored Event Time via Deep Learning},
+  author={Jia, Yichen and Jeong, Jong-Hyeon},
+  journal={arXiv preprint arXiv:2202.05155},
+  year={2022}
+}
